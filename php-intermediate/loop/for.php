@@ -1,6 +1,6 @@
 <?php
 
-//count() or sizeof() results are the sames.
+//count() or sizeof() (alias of count) results are the sames.
 $elements = [1,2,3,4,5];
 
 for ($i = 1; $i <= count($elements); $i++)
