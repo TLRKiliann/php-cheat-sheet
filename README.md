@@ -19,6 +19,7 @@ I really needed to do this ! Hope this will help someone else !
 ## Basic
 
 - array
+- debug
 - loop
 - function
 - class
@@ -36,7 +37,7 @@ I really needed to do this ! Hope this will help someone else !
 
 - call a function from another file.
 - call a class from another file.
-- PDO
+- function
 - backend
 
 Enjoy it ! :koala:
