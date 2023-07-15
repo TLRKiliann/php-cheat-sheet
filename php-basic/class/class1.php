@@ -1,5 +1,6 @@
 <?php
 
+//class with 2 functions
 class MyClass
 {
 	public $theName;
@@ -10,13 +11,14 @@ class MyClass
 	}
 	function get_name()
 	{
-		return $this->theName;
+		echo $this->theName;
 	}
 }
 
+//Instanciation into an object
 $callClass = new MyClass();
-$callClass->set_name("John");
-echo $callClass->get_name();
+$callClass->set_name("Henry");
+$callClass->get_name(); //Henry
 echo "\n";
 
 ?>
