@@ -50,7 +50,4 @@ echo "\n";
 print_r($caller->secondMethod());
 echo "\n";
 
-//var_dump($caller);
-//echo $caller & print_f($caller) doesn't work !
-
 ?>

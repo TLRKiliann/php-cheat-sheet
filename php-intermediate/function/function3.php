@@ -13,6 +13,4 @@ function firstFunction()
 
 $call = firstFunction().secondFunction().thirdFunction();
 
-print_r($call);
-
 ?>

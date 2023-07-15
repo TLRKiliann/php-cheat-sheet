@@ -10,6 +10,4 @@ function firstFunction()
 
 $call = firstFunction().secondFunction();
 
-print_r($call);
-
 ?>

@@ -12,6 +12,4 @@ function firstFunction()
 
 $call = firstFunction();
 
-print_r($call);
-
 ?>
