@@ -27,6 +27,7 @@ file.
 
 Create a trait and use it in a class:
 
+```
 <?php
 trait message1 {
   public function msg1() {
@@ -41,6 +42,7 @@ class Welcome {
 $obj = new Welcome();
 $obj->msg1();
 ?>
+```
 
 The use keyword has two purposes: it tells a class to inherit a trait 
 and it gives an alias to a namespace.
@@ -117,11 +119,13 @@ Attribuez un alias à un espace de noms :
 use Html as H;
 $table = new H\Table();
 ?>
+```
 
 ---
 
 Donnez un alias à une classe :
 
+```
 <?php
 use Html\Table as T;
 $table = new T();
@@ -548,7 +552,6 @@ class MyOtherClass
 $myObj = new MyOtherClass( 'value' );
 
 ---
-
 
 Les portées « public », « protected » et « private ». (p.20)
 
