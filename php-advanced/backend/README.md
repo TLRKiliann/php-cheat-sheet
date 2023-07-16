@@ -1,0 +1,44 @@
+- app
+    - controllers
+        - HomeController.php
+        - UserController.php
+        - ...
+    - models *
+        - UserModel.php *
+        - ProductModel.php *
+        - ...
+    - views
+        - home
+            - index.php
+            - about.php
+            - ...
+        - user
+            - profile.php
+            - edit.php
+            - ...
+        - ...
+    - templates
+        - header.php
+        - footer.php
+        - ...
+- public
+    - css
+        - styles.css
+        - ...
+    - js
+        - script.js
+        - ...
+    - index.php
+    - ...
+- config
+    - config.ini
+    - init.php
+    - Db.php
+- core
+    - Router.php *
+    - ...
+- includes
+    - header.php
+    - footer.php
+    - ...
+- .htaccess
