@@ -1,31 +1,31 @@
 
 # include and require Statements
 
-It is possible to insert the content of one PHP file into another PHP 
-file (before the server executes it), with the include or require statement.
+Il est possible d'insérer le contenu d'un fichier PHP dans un autre fichier PHP 
+(avant que le serveur ne l'exécute), avec l'instruction include ou require.
 
-The include and require statements are identical, except upon failure:
+Les instructions include et require sont identiques, sauf en cas d'échec :
 
-	+ require will produce a fatal error (E_COMPILE_ERROR) and stop the script
-	+ include will only produce a warning (E_WARNING) and the script will continue
+	+ require produira une erreur fatale (E_COMPILE_ERROR) et arrêtera le script
+	+ include ne produira qu'un avertissement (E_WARNING) et le script continuera.
 
-So, if you want the execution to go on and show users the output, even if 
-the include file is missing, use the include statement. Otherwise, in case 
-of FrameWork, CMS, or a complex PHP application coding, always use the 
-require statement to include a key file to the flow of execution. This will 
-help avoid compromising your application's security and integrity, just 
-in-case one key file is accidentally missing.
+Donc, si vous voulez que l'exécution se poursuive et que les utilisateurs puissent voir la sortie, même si le fichier include est manquant, utilisez la commande 
+le fichier include est manquant, utilisez l'instruction include. Sinon, dans le cas de 
+d'un FrameWork, d'un CMS, ou du codage d'une application PHP complexe, utilisez toujours l'instruction 
+require pour inclure un fichier clé dans le flux d'exécution. Cela vous permettra d'éviter de compromettre le bon fonctionnement de votre application. 
+d'éviter de compromettre la sécurité et l'intégrité de votre application, juste 
+au cas où un fichier clé serait accidentellement manquant.
 
-Including files saves a lot of work. This means that you can create a 
-standard header, footer, or menu file for all your web pages. Then, when 
-the header needs to be updated, you can only update the header include 
-file.
+L'inclusion de fichiers permet d'économiser beaucoup de travail. Cela signifie que vous pouvez créer un 
+un fichier d'en-tête, de pied de page ou de menu standard pour toutes vos pages web. Ensuite, lorsque 
+Lorsque l'en-tête doit être mis à jour, il vous suffit de mettre à jour le fichier d'inclusion de l'en-tête. 
+de l'en-tête.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 # use & namespace (use with traits, name)
 
-Create a trait and use it in a class:
+Créer un trait & l'utiliser dans une class :
 
 ```
 <?php
@@ -44,27 +44,28 @@ $obj->msg1();
 ?>
 ```
 
-The use keyword has two purposes: it tells a class to inherit a trait 
-and it gives an alias to a namespace.
+Le mot-clé use a deux objectifs : il indique à une classe d'hériter d'un trait et il donne un alias à un espace de noms. 
+et il donne un alias à un espace de noms.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 # namespace
 
 PHP Namespaces
-Namespaces are qualifiers that solve two different problems:
 
-They allow for better organization by grouping classes that work together 
-to perform a task.
-They allow the same name to be used for more than one class.
-For example, you may have a set of classes which describe an HTML table, 
-such as Table, Row and Cell while also having another set of classes to 
-describe furniture, such as Table, Chair and Bed. Namespaces can be used 
-to organize the classes into two different groups while also preventing 
-the two classes Table and Table from being mixed up.
+Les espaces de nommage sont des qualificatifs qui résolvent deux problèmes différents :
+
+Ils permettent une meilleure organisation en regroupant les classes qui travaillent ensemble 
+pour effectuer une tâche.
+Ils permettent d'utiliser le même nom pour plusieurs classes.
+Par exemple, vous pouvez avoir un ensemble de classes qui décrivent un tableau HTML, 
+comme Table, Row et Cell, tout en ayant un autre ensemble de classes pour 
+pour décrire un meuble, comme Table, Chair et Bed. Les espaces de nommage peuvent être utilisés 
+pour organiser les classes en deux groupes différents tout en évitant que les deux classes 
+les deux classes Table et Table ne soient pas confondues.
 
 Les constantes, classes et fonctions déclarées dans ce fichier appartiendront 
-à l' espace de noms Html :
+à l'espace de noms Html :
 
 ```
 <?php
@@ -109,7 +110,7 @@ $row = new Row();
 ---
 
 Il peut être utile de donner à un espace de noms ou à une classe un alias pour 
-faciliter l'écriture. Cela se fait avec le usemot clé :
+faciliter l'écriture. Cela se fait avec le mot clé `use`:
 
 Exemple
 Attribuez un alias à un espace de noms :
@@ -169,19 +170,16 @@ juste avant qu’un objet ne soit détruit.
 
 # Class Constants
 
-Constants cannot be changed once it is declared.
+Constants cannot be modified once they have been declared.
 
-Class constants can be useful if you need to define some constant data within 
-a class.
+Class constants can be useful for defining constant data within a class.
 
-A class constant is declared inside a class with the const keyword.
+A class constant is declared inside a class with the `const` keyword.
 
-Class constants are case-sensitive. However, it is recommended to name the 
-constants in all uppercase letters.
+Class constants are case-sensitive. However, it is recommended to name in uppercase.
 
-We can access a constant from outside the class by using the class name 
-followed by the scope resolution operator (::) followed by the constant name, 
-like here:
+We can access a constant from outside the class by using the class name followed by the scope resolution operator (::) followed by the name of the constant, as shown here:
+
 
 ```
 <?php
@@ -199,7 +197,7 @@ $goodbye->byebye();
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
-# abstraction des classes
+# abstraction des classes (et interfaces)
 
 Une classe abstraite est une classe qui contient au moins une méthode abstraite, 
 c'est-à-dire une méthode qui ne contient aucun code réel, juste le nom et les 
@@ -221,7 +219,7 @@ fichier source par définition de classe. Un des plus gros inconvénients de cet
 méthode est d'avoir à écrire une longue liste d'inclusions de fichier de classes 
 au début de chaque script : une inclusion par classe.
 
-La fonction spl_autoload_register() enregistre un nombre quelconque de chargeurs 
+La fonction `spl_autoload_register()` enregistre un nombre quelconque de chargeurs 
 automatiques, ce qui permet aux classes et aux interfaces d'être automatiquement 
 chargées si elles ne sont pas définies actuellement. En enregistrant des 
 autochargeurs, PHP donne une dernière chance d'inclure une définition de classe 
@@ -234,12 +232,12 @@ manière. Ceci inclut les classes, interfaces, trait, et énumérations.
 
 Antérieur à PHP 8.0.0, il était possible d'utiliser `__autoload()` pour autocharger 
 les classes et interfaces. Cependant c'est une alternative moins flexible à 
-spl_autoload_register() et `__autoload()` est obsolète à partir de PHP 7.2.0, et 
+`spl_autoload_register()` et `__autoload()` est obsolète à partir de PHP 7.2.0, et 
 supprimée à partir de PHP 8.0.0.
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
-# Interfaces (interface, implements, extends, public method)
+# Interfaces (interface, `__construct()`, implements, extends, public method)
 
 (Iterable, Cacheable, Renderable, etc)
 
@@ -258,7 +256,7 @@ doivent être publiques.
 ## En pratique les interfaces servent deux rôles complémentaires :
 
 Permettre aux développeurs de créer des objets de classes différentes qui peuvent être 
-utilisé de façon interchangeable, car elles implémentent la ou les mêmes interfaces. Un 
+utilisées de façon interchangeables, car elles implémentent la ou les mêmes interfaces. Un 
 exemple commun sont plusieurs services d'accès à des bases de données, plusieurs 
 gestionnaires de paiement ou différentes stratégies de cache. Différentes implémentations 
 peuvent être échangées sans nécessiter des changements dans le code qui les utilisent.
@@ -382,7 +380,7 @@ d'éviter la concaténation.
 ```
 (_)
 (dans une class)
-private static $_prperty;
+private static $_property;
 
 (class ou function)
 private function _mailSend()
