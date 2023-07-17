@@ -12,9 +12,7 @@
 
 ## Motivation
 
-It's been a long time since I learned PhP. But without revision code, it's so easy to forget.
-I've often thought it would be important to do a tutorial on this code. Otherwise, it will be an eternal restart, if I need to work on the backend or something like that or with PhP rules (public, private, static, etc).
-I really needed to do this ! Hope this will help someone else !
+It's been a long time since I learned PhP. I've now joined a team of developers working on a project using PhP with DP (design Pattern) MVC. I've often thought it would be important to do a tutorial on this code. I hope it will prove useful to help someone else!
 
 ## How to run a script php
 
