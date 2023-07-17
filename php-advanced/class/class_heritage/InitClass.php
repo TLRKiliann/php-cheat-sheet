@@ -10,11 +10,16 @@ class InitClass extends SecondClass
 	{
 		echo self::$_prop . "\n";
 		parent::__construct();
+		parent::getSecond();
+		//You can use this.
+		parent::getLast("Yeah\n");
 	}
 }
 
 //Call SecondClass
 $newCall = new InitClass;
+//or you can use this method !
+//$newCall->last("Yeah");
 
 /*
 Dans votre cas, puisque aSubClass::testFunction() est hérité de baseTestMain::testFunction(), utilisez $this->testFunction(). Vous ne devriez utiliser parent::testFunction() que si vous allez surcharger cette méthode dans votre sous-classe, au sein de son implémentation.
