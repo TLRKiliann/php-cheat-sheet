@@ -1,49 +1,43 @@
 <?php
+namespace applications\statistics;
 
-class Controller {
-    protected $db;
+use includes\components\CommonController;
+//use includes\Request;
+use includes\Api;
 
-    public function __construct() {
-        // Établir la connexion à la base de données
-        $hostname = 'localhost';
-        $username = 'votre_nom_utilisateur';
-        $password = 'votre_mot_de_passe';
-        $database = 'votre_nom_base_de_donnees';
+use stdClass;
 
-        $this->db = new mysqli($hostname, $username, $password, $database);
+class Controller extends CommonController{
 
-        if ($this->db->connect_error) {
-            die("Échec de la connexion : " . $this->db->connect_error);
-        }
-    }
+    
+    
+    protected function _setDatasView()
+    {
+        $this->_setModels( [ 'statistics/ModelStatistics', 'demande/ModelDemandes' ] );
 
-    public function getUsers() {
-        // Exemple de requête SELECT
-        $sql = "SELECT * FROM users";
-        $result = $this->db->query($sql);
+        $modelStatistics     = $this->_models[ 'ModelStatistics' ];
+        $modelDemandes       = $this->_models[ 'ModelDemandes' ];
 
-        $users = [];
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $users[] = $row;
-            }
-        }
+    
+        switch( $this->_action )
+        {          
+            // API
+            case 'api':
+            
+                Api::apiBlocked();
+                    
+            break;
 
-        return $users;
-    }
+            default :
+                
+                $this->_datas = new stdClass;
 
-    public function addUser($username) {
-        // Exemple de requête INSERT
-        $sql = "INSERT INTO users (username) VALUES ('$username')";
-        if ($this->db->query($sql) === TRUE) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public function closeConnection() {
-        // Fermer la connexion à la base de données
-        $this->db->close();
+                $this->_datas->stats = $modelStatistics->exempleStat();
+                
+                $this->_view = 'statistics/stat_graphs';
+                
+            break;
+            
+        } 
     }
 }

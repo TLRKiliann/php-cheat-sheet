@@ -1,4 +1,4 @@
-# DP MVC PHP Backend
+# Design Patern Model-View-Controller PHP Backend
 
 ## Basic architecture
 
@@ -49,7 +49,21 @@
     - ...
 - .htaccess
 
+---
+
 ## Files & Roles
+
+- index.php
+
+### Main file of app
+
+- Controller.php
+
+- ModelStatistics.php
+
+- InterfaceModule.php
+
+- Router.php
 
 ### Display data
 
@@ -67,18 +81,12 @@ Display data
 
 - app/public/theme/lib/plugins/stat_graphs/stat_graphs.js
 
-### Main file of app
+### Request MySQL
 
 - Controller.php
 
 - ModelStatistics.php
 
-- InterfaceModule.php
+- ORM ( Object - Relationnal - Mapping )
 
-- Router.php
-
-### Request
-
-- Controller.php
-
-- ModelStatistics.php
+- Builder (It's a filter. Manage ORM & define type data and fields for db)
