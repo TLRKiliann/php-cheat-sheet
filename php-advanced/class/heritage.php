@@ -11,7 +11,7 @@ class MyClass
 	protected $_propProtected = "protected prop\n";
 	private $_propPrivate = "private prop\n";
 
-	public function __construct() //cannot be private or static
+	public function __construct() //cannot be private or static !
 	{
 		echo $this->propPublic;
 		echo $this->_propProtected;
@@ -21,7 +21,7 @@ class MyClass
 
 class MyOtherClass extends MyClass
 {
-	public function __construct() //cannot be private or static
+	public function __construct() //cannot be private or static !
 	{
 		echo $this->propPublic;
 		echo $this->_propProtected;
