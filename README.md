@@ -44,7 +44,25 @@ I really needed to do this ! Hope this will help someone else !
 
 - call a function from another file.
 - call a class from another file.
-- function
-- backend
+- types
+
+class :
+- class heritage
+- class etendue
+- interface
+- self parent with static method or prop
+- static protected, public, private
+- surcharge de class
+- getter + setter
+- construct + destruct
+- extends + implements
+
+function :
+- magic method
+- global
+
+POO : under development
+
+backend : under development
 
 Enjoy it ! :koala:
