@@ -25,7 +25,7 @@ class Admin extends User {
     public function getNom()
     {
         parent::getNom();
-        echo ' (depuis la classe étendue)<br>';
+        echo '(depuis la classe étendue)<br>';
     }
     
     public function setBan($b)
