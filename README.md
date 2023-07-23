@@ -4,9 +4,9 @@
 
 3 folders with different level :
 
-- basic
-- intermediate
-- advanced
+- php-basic
+- php-intermediate
+- php-advanced
 
 ---
 
@@ -31,6 +31,7 @@ It's been a long time since I learned PhP. I've now joined a team of developers 
 ## Intermediate
 
 - array
+- class
 - loop
 - function
 - class

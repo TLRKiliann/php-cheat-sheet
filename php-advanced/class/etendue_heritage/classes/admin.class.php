@@ -2,7 +2,7 @@
 
 class Admin extends User
 {
-    protected $ban;
+    private $ban;
     
     public function setBan($b){
         $this->ban[] .= $b;

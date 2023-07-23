@@ -5,9 +5,11 @@ class MyClass
 	//we add (_) for a private property.
 	private $_variable;
 
-	public function setterFunc($valueToSet)
+	// pass value requiered !!!
+	public function setterFunc($_variable)
 	{
-		$this->_variable = $valueToSet;
+		// instantiate to private
+		$this->_variable = $_variable;
 	}
 	public function getterFunc()
 	{

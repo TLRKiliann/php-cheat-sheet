@@ -1,5 +1,7 @@
 <?php
 
+// Magic method
+
 class User
 {
 	protected $data = [
