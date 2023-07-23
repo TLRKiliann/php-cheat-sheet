@@ -1,1 +1,2 @@
 Yeah !!! My file test.txt !!
+(from construct_destruct.php)

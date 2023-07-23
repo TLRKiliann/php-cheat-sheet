@@ -4,9 +4,9 @@
 
 3 folders with different level :
 
-- basic
-- intermediate
-- advanced
+- php-basic
+- php-intermediate
+- php-advanced
 
 ---
 
@@ -33,6 +33,7 @@ I really needed to do this ! Hope this will help someone else !
 ## Intermediate
 
 - array
+- class
 - loop
 - function
 - class

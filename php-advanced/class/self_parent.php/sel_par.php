@@ -1,7 +1,9 @@
 <?php
 
+// cf. étendue_heritage
+
 // With static property & method (self:: & parent::).
-// 
+
 // SonClass -> ParentClass -> GrandParentClass
 
 class GrandParentClass
