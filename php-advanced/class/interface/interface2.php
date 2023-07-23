@@ -28,4 +28,6 @@ $newDog = new Dog;
 echo $newCat->makeSound("Meow !");
 echo $newDog->makeSound("Woof !!!");
 
+echo $newCat->speak();
+
 ?>
