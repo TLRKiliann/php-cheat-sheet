@@ -15,7 +15,17 @@ class Dog implements Animal
   }
 }
 
+class Cat implements Animal
+{
+  public function makeSound(string $sound): string
+  {
+    return "Cat make : " . $sound . "\n";
+  }
+}
+
+$newCat = new Cat;
 $newDog = new Dog;
+echo $newCat->makeSound("Meow !");
 echo $newDog->makeSound("Woof !!!");
 
 ?>
