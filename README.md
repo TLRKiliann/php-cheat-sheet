@@ -42,7 +42,25 @@ It's been a long time since I learned PhP. I've now joined a team of developers 
 
 - call a function from another file.
 - call a class from another file.
-- function
-- backend
+- types
+
+class :
+- class heritage
+- class etendue
+- interface
+- self parent with static method or prop
+- static protected, public, private
+- surcharge de class
+- getter + setter
+- construct + destruct
+- extends + implements
+
+function :
+- magic method
+- global
+
+POO : under development
+
+backend : under development
 
 Enjoy it ! :koala:
