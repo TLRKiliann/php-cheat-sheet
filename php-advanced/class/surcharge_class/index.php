@@ -13,17 +13,23 @@
             require 'classes/admin.class.php';
             
             $pierre = new Admin('Pierre', 'abcdef');
-            $mathilde = new User('Math', 123456);
-            
+            $mathilde = new Admin('Mathilde', 123456);
+
+            //Not possible = overloaded !
+            //$mathilde = new User('Mathilde', 123456);
+
             $pierre->getNom();
             $mathilde->getNom();
-            
-            echo '<br>';
             
             $pierre->setBan('Paul');
             $pierre->setBan('Jean');
             echo $pierre->getBan();
+
+            $mathilde->setBan("Catwoman");
+            $mathilde->setBan("Aphrodite");
+
+            echo $mathilde->getBan();
+
         ?>
-        <p>Un paragraphe</p>
     </body>
 </html>
