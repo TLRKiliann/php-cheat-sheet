@@ -19,6 +19,4 @@ foreach ($elements as $element) {
 	};
 }
 
-
-
 ?>
