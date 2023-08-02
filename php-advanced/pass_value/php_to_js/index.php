@@ -5,12 +5,15 @@
   </head>
 
   <body>
+
     <div id="app">
+      <!-- PHP into JavaScript -->
       <script type="text/javascript">
         const myValue = '<?php echo "My value displayed"; ?>';
       </script>
     </div>
+    
     <script type="text/javascript" src="file.js"></script>
-    <div id="output"></div>
+  
   </body>
 </html>
