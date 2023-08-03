@@ -1,0 +1,74 @@
+<?php
+
+$start_dates = [
+	'2022-01-30 00:00:00', '2022-04-10 00:00:00',  // 1
+	'2022-04-15 00:00:00', '2022-04-22 00:00:00', // 3
+	'2022-09-19 00:00:00', '2022-09-26 00:00:00', // 2
+	'2022-11-26 00:00:00','2022-11-26 00:00:00' // 2
+];
+
+/*
+// To format date & convert to month (int).
+for ($i=0; $i <= 4; $i++)
+{
+
+	$formatDate[] .= date('F', strtotime($start_dates[$i]));
+	$countVal = array_count_values($formatDate);
+	var_dump($countVal);
+}
+*/
+
+for ($i=1; $i <= sizeof($start_dates); $i++)
+{
+	$demandes = $start_dates[$i];
+	$newDate = strtotime($demandes);
+	$formatDate[] .= date('F', $newDate);
+	$countVal = array_count_values($formatDate);
+	var_dump($countVal);
+}
+
+foreach($countVal as $key => $value)
+{
+	switch($key)
+	{
+		case "January":
+		echo "Janvier " . $value . "\n";
+		break;
+		case "April":
+		echo "Avril " . $value . "\n";
+		break;
+		case "September":
+		echo "Septembre " . $value . "\n";
+		break;
+		case "November":
+		echo "Novembre " . $value . "\n";
+		break;
+		default:
+		echo "finish";
+	}
+}
+
+/*
+EN
+array(3) {
+  ["January"]=>
+  int(1)
+  ["April"]=>
+  int(2)
+  ["September"]=>
+  int(2)
+}
+
+FR
+Janvier 1
+Avril 3
+Septembre 2
+*/
+
+// array_replace() with only 1 element per month !
+//$arrayMonth = [ 0 => $formatDate[0], 1 => $formatDate[1], 2 => $formatDate[2] ];
+//$test = array_replace($formatDate, $arrayMonth);
+//print_r($test);
+
+//https://stackoverflow.com/questions/11460517/sorting-arrays-by-months
+?>
