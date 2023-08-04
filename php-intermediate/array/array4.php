@@ -12,16 +12,6 @@ $start_dates = [
 	'2022-11-26 00:00:00','2022-11-26 00:00:00' // 2
 ];
 
-/*
-// Short version
-for ($i=0; $i <= 4; $i++)
-{
-	$formatDate[] .= date('F', strtotime($start_dates[$i]));
-	$countVal = array_count_values($formatDate);
-	var_dump($countVal);
-}
-*/
-
 // To format date & convert to month (int).
 for ($i=0; $i < count ($start_dates); $i++)
 {
@@ -56,6 +46,7 @@ foreach($countVal as $key => $value)
 
 /*
 EN
+//var_dump($countVal);
 array(3) {
   ["January"]=>
   int(1)
@@ -66,6 +57,7 @@ array(3) {
 }
 
 FR
+//switch($key)
 Janvier 1
 Avril 3
 Septembre 2
