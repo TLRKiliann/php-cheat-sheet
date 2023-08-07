@@ -5,13 +5,13 @@ $elements = ["Myriam", "Ludwig", "Ben"];
 foreach ($elements as $element) {
 	switch($element) 
 	{
-		case $element === "Ludwig":
+		case "Ludwig":
 		echo "Ludwig is in array\n";
 		break;
-		case $element === "Myriam":
+		case "Myriam":
 		echo "Myriam is in array\n";
 		break;
-		case $element === "Ben":
+		case "Ben":
 		echo "Ben is in array\n";
 		break;
 		default:
