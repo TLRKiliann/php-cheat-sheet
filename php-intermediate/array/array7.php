@@ -8,13 +8,16 @@ $demandes = [
     '2022-11-26 00:00:00','2022-11-26 00:00:00' // 2
 ];
 
-$arrayByMonth = [ "01" => 0, "02" => 0, "03" => 0,
-    "04" => 0, "05" => 0, "06" => 0, "07" => 0, 
-    "08" => 0, "09" => 0, "10" => 0, "11" => 0, "12" => 0 ];
+$arrayByMonth = [ 
+    "01" => 0, "02" => 0, "03" => 0,
+    "04" => 0, "05" => 0, "06" => 0, 
+    "07" => 0, "08" => 0, "09" => 0,
+    "10" => 0, "11" => 0, "12" => 0
+];
 
 if ( isset( $demandes ) )
 {
-    foreach( $demandes as $n => $demande )
+    foreach($demandes as $key => $demande)
     {
         $allDemandes = $demande;
         $newDate = date('m', strtotime($allDemandes));
@@ -22,10 +25,10 @@ if ( isset( $demandes ) )
     }
 }
 
-/*
 print_r($arrayByMonth); 
 echo "\n";
 
+/*
 Array
 (
     [01] => 1 // 1 $demande for january;
