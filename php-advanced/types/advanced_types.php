@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
+
 // to implements to others class.
 interface AnimalShelter
 {
 
-    public function adopt(string $name): Animal;
+    public function adopt(string $name);
 }
 
 
@@ -32,6 +33,7 @@ class DogShelter implements AnimalShelter
 $kitty = (new CatShelter)->adopt("Ricky");
 $kitty->adopt("Ricky");
 $kitty->speak();
+
 echo "\n";
 
 $doggy = (new DogShelter)->adopt("Mavrick");
