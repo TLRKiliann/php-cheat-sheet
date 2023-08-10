@@ -2,7 +2,7 @@
 
 function arr($name)
 {
-	if (isset($name))
+	if ( isset( $name ) )
 	{
 		echo $name;
 	}

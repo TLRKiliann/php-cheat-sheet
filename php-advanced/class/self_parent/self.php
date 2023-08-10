@@ -12,13 +12,13 @@ class Routing
 	public static function routeOne()
 	{
 		// call public static attribute.
-		echo "+ Route (1) function : " . self::$variable;
+		echo "+ Route (1) function : " . self::$_variable;
 	}
 	// called method
 	public static function routeTwo()
 	{
 		//call public static function.
-		echo "+ Route (2) function : " . self::routeOne() . self::$variable;
+		echo "+ Route (2) function : " . self::routeOne() . self::$_variable;
 	}
 }
 

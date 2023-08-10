@@ -9,7 +9,7 @@
 class GrandParentClass
 {
 
-	protected static $_gpVal = "*GP Value*";
+	private static $_gpVal = "*GP Value*";
 
 	public static function catchItemGParent()
 	{
@@ -39,7 +39,6 @@ class SonClass extends ParentClass
 	// Cannot be static !	
 	public function callerFromSon()
 	{
-		echo "+ SonClass call gpVal : " . parent::$_gpVal . "\n";
 		parent::getItemParent();
 		parent::anotherMethod();
 	}

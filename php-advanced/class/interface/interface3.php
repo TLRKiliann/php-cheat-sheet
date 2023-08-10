@@ -24,7 +24,7 @@ class Dog implements Animal {
 
 class Mouse implements Animal {
   public function makeSound() {
-    $speak = "hiii\n";
+    $speak = "hip\n";
     echo $speak;
   }
 }
@@ -41,20 +41,17 @@ class Mouse implements Animal {
     
     <body>
         <h1>Titre principal</h1>
-
         <?php
           // Create a list of animals
           $cat = new Cat();
           $dog = new Dog();
           $mouse = new Mouse();;
-          // List created
+          // List of class created
           $animals = array($cat, $dog, $mouse);
-
           // Tell the animals to make a sound
           foreach($animals as $animal) {
             $animal->makeSound();
           }
         ?>
-
     </body>
 </html>
