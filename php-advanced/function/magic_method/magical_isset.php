@@ -8,7 +8,8 @@ class User
 		'email'=>'contact@devpeel.com'
 	];
 
-	public function __isset($key){
+	public function __isset($key)
+	{
 		return isset($this->data[$key]);
 	}
 }
