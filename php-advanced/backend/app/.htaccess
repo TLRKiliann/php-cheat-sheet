@@ -1,6 +1,0 @@
-1 RewriteEngine on
-2
-3 RewriteCond %{REQUEST_FILENAME} !-f
-4 RewriteCond %{REQUEST_FILENAME} !-d
-5
-6 RewriteRule ^(.*)$ index.php?page=$1 [L,QSA]
