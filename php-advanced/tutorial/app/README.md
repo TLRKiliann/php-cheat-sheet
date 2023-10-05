@@ -29,3 +29,21 @@ $post = $db->query('SELECT * FRM post WHERE $_GET['id']');
 
 GOOD PRACTICE !
 $post = $db->prepare('SELECT * FRM post WHERE id = ?', [$_GET['id']]);
+
+
+## class heritage with static (Table)
+
+*Help us to obtain the right name of the class*
+
+Replace: self::$xname; by static::$xname;
+Replace: __CLASS__ = get_called_class()
+
+## __CLASS__ & get_called_class()
+
+Depends of son class. If the heritage class treats 
+properties from 2 sons class.
+
+`__CLASS__ & get_called_class()` are called by own class.
+
+- `__CLASS__` : with normal function
+- `get_called_class()` : with static function

@@ -15,9 +15,9 @@ class Database
     public function _construct(
         $dbname,
         $host = "192.168.XX.XX",
-        $port = XXXX,
-        $username = "XXXX",
-        $password = "XXXX"
+        $port = XXXXXX,
+        $username = "XXXXXX",
+        $password = "XXXXXX"
     )
     {
         $this->host = $host;
@@ -29,19 +29,15 @@ class Database
 
     private function getPDO()
     {
-        if ($this->pdo === null)
+        try {
+            $pdo = new PDO("mysql:host=192.168.XX.XX;port=XXXXXX;dbname=mytable;charset=utf8", 
+                "XXXXXX", "XXXXXX"
+            );
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+            $this->pdo = $pdo;
+        } catch(PDOException $e)
         {
-            try {
-                $pdo = new PDO("mysql:host=192.168.XX.XX;port=XXXX;dbname=mytable;charset=utf8", 
-                    "XXXX", "XXXX", array(
-                        PDO::ATTR_PERSISTENT => true
-                    )
-                );
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-                $this->pdo = $pdo;
-            } catch(PDOException $e) {
-                echo $e->getMessage();
-            }
+            echo $e->getMessage();
         }
         return $pdo;
     }
