@@ -5,9 +5,8 @@
 			<nav>
 				<ul>
 					<li><a href="index.php?p=home">Home</a></li>
-					<!--li><a href="index.php?p=article">page 2</a></li-->
 					<li><a href="index.php?p=form">Form</a></li>
-					<li><a>No PAGE</a></li>
+					<li><a href="index.php?p=contact">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -18,9 +17,8 @@
 			<nav>
 				<ul>
 					<li><a href="index.php?p=home">Home</a></li>
-					<!--li><a href="index.php?p=article">page 2</a></li-->
 					<li><a href="index.php?p=form">Form</a></li>
-					<li><a>No PAGE</a></li>
+					<li><a href="index.php?p=contact">Contact</a></li>
 				</ul>
 			</nav>
 		</footer>
