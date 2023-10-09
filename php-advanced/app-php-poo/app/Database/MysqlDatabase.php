@@ -13,8 +13,8 @@ class MysqlDatabase extends Database
     private $password;
     private $pdo;
 
-    public function _construct($dbname, $host = "192.168.18.9", $port = 3306,
-        $username = "koala33", $password = "Ko@l@tr3379")
+    public function _construct($dbname, $host = "XXXX.XXXX.XXXX.XXXX", $port = XXXX,
+        $username = "koala33", $password = "XXXX")
     {
         $this->host = $host;
         $this->port = $port;
@@ -26,8 +26,8 @@ class MysqlDatabase extends Database
     private function getPDO()
     {
         try {
-            $pdo = new PDO("mysql:host=192.168.18.9;port=3306;dbname=mytable;charset=utf8", 
-                "koala33", "Ko@l@tr3379"
+            $pdo = new PDO("mysql:host=XXXX.1XXXX68.XXXX.XXXX;port=XXXX;dbname=mytable;charset=utf8", 
+                "XXXX", "XXXX"
             );
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
             $this->pdo = $pdo;
